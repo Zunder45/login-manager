@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   color: white;
-  background-color: #34495e;
+  background-image: url(/usr/share/backgrounds/OsfFKJ0.jpg);
   /* background: radial-gradient(center, ellipse cover, #455a64 10%, #263238 100%); */
   overflow: hidden;
 }
