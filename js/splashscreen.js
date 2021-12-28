@@ -356,6 +356,8 @@ class SplashScreen {
     * undefined behaivour.
     */
     _close()  {
+//Дизактивация поля ввода пароля при закрытии LoginManager
+      document.getElementById("inputPassword").blur();
       if (this._state != "open") {
         log.warn("Cannot close splash screen when _state is: " + this._state);
         return;
@@ -380,10 +382,15 @@ class SplashScreen {
 
     }
     _open() {
+//Активация поля ввода пароля при открытии LoginManager
+      document.getElementById("inputPassword").focus();
       if (this._state != "closed") {
         log.warn("Cannot open splash screen when _state is: " + this._state);
         return;
       }
+
+      	
+
       clearTimeout(this.resetTimeout);
       let reset_duration = 60*1000;
 
@@ -408,7 +415,7 @@ class SplashScreen {
         });
       }
 
-
+	
     }
 
   }
