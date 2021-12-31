@@ -8,6 +8,7 @@
  *
  * NOTE: Uses the Logger class for debugging purposes
  */
+
 class LoginManager {
 		constructor() {
 			this._DEF_LM = {
@@ -88,7 +89,10 @@ class LoginManager {
 		*    - deny on failure
 		*/
 		auth(username="", password="", callback) {
-
+			let $password = $("#inputPassword");		
+			if ($password.val() == ""){
+	        		return;
+	 		} 
 			if (!this.lightdm) {
 				log.warn("Cannot attempt login because lightdm is missing the " +
 				"required fields. Please note that lightdm is not explicitly " +
